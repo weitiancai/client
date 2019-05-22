@@ -1,0 +1,28 @@
+server:
+  port: 7778
+  context-path: /ui
+  session:
+    cookie:
+      name: weimeng
+
+auth-server: http://localhost:7777/auth
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: ClientId  #客户端 id
+      clientSecret: secret # 客户端的 密码
+      accessTokenUri: ${auth-server}/oauth/token
+      userAuthorizationUri: ${auth-server}/oauth/authorize
+#      scope: read, write
+      authorized-grant-types: authorization_code
+    resource:
+      userInfoUri: ${auth-server}/hello/principal
+
+
+
+spring:
+  thymeleaf:
+    cache: false

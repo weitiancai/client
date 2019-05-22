@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" th:href="@{/webjars/materializecss/0.99.0/css/materialize.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/material-design-icons/3.0.1/material-icons.css}"/>
+    <title>Spring Security OAuth Example</title>
+
+</head>
+
+
+<body>
+<div th:replace="fragments/header :: header"></div>
+<h1>Spring Security OAuth Example - Secured</h1>
+
+Welcome to TechPrimers!
+
+<span th:text="${#authentication.name}"></span>
+
+
+</body>
+
+</html>
