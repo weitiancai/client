@@ -22,7 +22,7 @@ security:
       userInfoUri: ${auth-server}/hello/principal
 
 
-
 spring:
   thymeleaf:
     cache: false
+debug: true
